@@ -3,5 +3,5 @@ use crate::note::note_name::NoteName;
 
 pub struct NoteSPN {
     pub name: NoteName,
-    pub accidental: Accidental,
+    pub accidental: Option<Accidental>,
 }
