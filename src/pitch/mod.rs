@@ -1,1 +1,2 @@
-pub struct Pitch(u8);
+pub mod absolute_pitch;
+pub mod relative_pitch;
