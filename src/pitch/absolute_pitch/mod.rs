@@ -1,4 +1,5 @@
 use crate::note::note_name::NoteName;
+use crate::note::note_spn::NoteSPN;
 use crate::pitch::relative_pitch::RelativePitch;
 
 pub struct AbsolutePitch(pub(super) u8);
@@ -20,5 +21,14 @@ impl From<NoteName> for AbsolutePitch {
             NoteName::A => 9,
             NoteName::B => 11,
         })
+    }
+}
+
+impl From<NoteSPN> for AbsolutePitch {
+    fn from(value: NoteSPN) -> Self {
+        let note_name_pitch: RelativePitch = AbsolutePitch::from(value.name).into();
+        let accidental_pitch: RelativePitch = value.accidental.into();
+
+        RelativePitch(note_name_pitch.0 + accidental_pitch.0).into()
     }
 }
