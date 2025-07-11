@@ -1,0 +1,5 @@
+repository:
+  name: harmny
+  description: A dissonant music theory API
+  homepage: https://crates.io/crates/harmny
+  topics: rust, music theory
