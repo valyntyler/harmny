@@ -2,5 +2,7 @@
 name = "harmny"
 version = "0.1.0"
 edition = "2024"
+description = "A dissonant music theory API"
+license = "GPL-3.0"
 
 [dependencies]
