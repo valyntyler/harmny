@@ -1,7 +1,7 @@
 use crate::note::note_name::NoteName;
 use crate::pitch::relative_pitch::RelativePitch;
 
-pub struct AbsolutePitch(u8);
+pub struct AbsolutePitch(pub(super) u8);
 
 impl From<RelativePitch> for AbsolutePitch {
     fn from(value: RelativePitch) -> Self {
