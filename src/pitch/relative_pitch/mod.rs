@@ -1,6 +1,6 @@
 use crate::note::accidental::Accidental;
 
-pub struct RelativePitch(i8);
+pub struct RelativePitch(pub(super) i8);
 
 impl From<Option<Accidental>> for RelativePitch {
     fn from(value: Option<Accidental>) -> Self {
