@@ -1,2 +1,4 @@
-build:
+@_default: build
+
+@build:
   cargo build
